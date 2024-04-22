@@ -16,5 +16,30 @@ namespace Hotel_Manager
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
