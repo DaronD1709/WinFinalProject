@@ -12,3 +12,22 @@ D:\Final Project\Hotel Manager\Hotel Manager\obj\Debug\Hotel Manager.csproj.Copy
 D:\Final Project\Hotel Manager\Hotel Manager\obj\Debug\Hotel Manager.exe
 D:\Final Project\Hotel Manager\Hotel Manager\obj\Debug\Hotel Manager.pdb
 D:\Final Project\Hotel Manager\Hotel Manager\bin\Debug\FontAwesome.Sharp.dll
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\Hotel Manager.exe.config
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\Hotel Manager.exe
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\Hotel Manager.pdb
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\FontAwesome.Sharp.dll
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\Krypton.Toolkit.dll
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\Krypton.Toolkit.xml
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.csproj.AssemblyReference.cache
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.ChangePassWord.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.ForgetPassword.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Form1.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.MainForm.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.New_Users.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Properties.Resources.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.csproj.GenerateResource.cache
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.csproj.CoreCompileInputs.cache
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.csproj.CopyComplete
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.exe
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel Manager.pdb
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.OTP.resources

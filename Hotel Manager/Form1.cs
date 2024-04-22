@@ -41,5 +41,17 @@ namespace Hotel_Manager
         {
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgetPassword forgetPassword = new ForgetPassword();
+            forgetPassword.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            New_Users form_NewUser = new New_Users();
+            form_NewUser.Show(this);
+        }
     }
 }
