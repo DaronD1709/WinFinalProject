@@ -42,7 +42,7 @@
             this.label1.Font = new System.Drawing.Font("Agency FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(276, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 53);
+            this.label1.Size = new System.Drawing.Size(260, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reset Password";
             // 
@@ -50,7 +50,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 174);
+            this.label2.Location = new System.Drawing.Point(92, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 35);
             this.label2.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 265);
+            this.label3.Location = new System.Drawing.Point(60, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 35);
             this.label3.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(271, 174);
+            this.txtpassword.Location = new System.Drawing.Point(244, 169);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(362, 37);
@@ -76,7 +76,7 @@
             // 
             // txtrepassword
             // 
-            this.txtrepassword.Location = new System.Drawing.Point(271, 265);
+            this.txtrepassword.Location = new System.Drawing.Point(244, 260);
             this.txtrepassword.Multiline = true;
             this.txtrepassword.Name = "txtrepassword";
             this.txtrepassword.Size = new System.Drawing.Size(362, 37);

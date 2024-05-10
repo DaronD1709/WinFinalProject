@@ -53,5 +53,15 @@ namespace Hotel_Manager
             New_Users form_NewUser = new New_Users();
             form_NewUser.Show(this);
         }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,7 +50,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnlogin.Location = new System.Drawing.Point(162, 341);
+            this.btnlogin.Location = new System.Drawing.Point(162, 356);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(148, 58);
             this.btnlogin.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.AliceBlue;
-            this.linkLabel2.Location = new System.Drawing.Point(237, 290);
+            this.linkLabel2.Location = new System.Drawing.Point(232, 287);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(124, 24);
             this.linkLabel2.TabIndex = 6;
@@ -95,7 +95,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
             this.label1.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Linen;
-            this.label1.Location = new System.Drawing.Point(165, 31);
+            this.label1.Location = new System.Drawing.Point(159, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 72);
             this.label1.TabIndex = 9;
@@ -103,7 +103,7 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(121, 148);
+            this.txtusername.Location = new System.Drawing.Point(116, 146);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(240, 41);
             this.txtusername.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -116,7 +116,7 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(121, 229);
+            this.txtpassword.Location = new System.Drawing.Point(116, 227);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '●';
             this.txtpassword.Size = new System.Drawing.Size(240, 41);
@@ -127,6 +127,7 @@
             this.txtpassword.StateCommon.Content.Font = new System.Drawing.Font("Agency FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.TabIndex = 12;
             this.txtpassword.UseSystemPasswordChar = true;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // iconPictureBox2
             // 
@@ -136,11 +137,12 @@
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 38;
-            this.iconPictureBox2.Location = new System.Drawing.Point(66, 232);
+            this.iconPictureBox2.Location = new System.Drawing.Point(61, 230);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(40, 38);
             this.iconPictureBox2.TabIndex = 8;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // iconPictureBox1
             // 
@@ -150,7 +152,7 @@
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(66, 151);
+            this.iconPictureBox1.Location = new System.Drawing.Point(61, 149);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(40, 38);
             this.iconPictureBox1.TabIndex = 7;
@@ -162,7 +164,7 @@
             this.pictureBox1.Image = global::Hotel_Manager.Properties.Resources.backGround_DN;
             this.pictureBox1.Location = new System.Drawing.Point(4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(975, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(978, 500);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -183,7 +185,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Welcome";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
