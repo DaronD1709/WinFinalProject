@@ -8,7 +8,7 @@ namespace Hotel_Manager.Classes
 {
     internal class Manager
     {
-        ConnectionManager connectionManager = new ConnectionManager();
+        
         public int ID_Manager { get; set; }
         public string Name { get; set; }
         public DateTime DOB { get; set; }
