@@ -46,7 +46,7 @@
             this.label1.Font = new System.Drawing.Font("Agency FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(338, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 53);
+            this.label1.Size = new System.Drawing.Size(271, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create New User";
             // 
@@ -145,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(889, 552);
+            this.ClientSize = new System.Drawing.Size(919, 552);
             this.Controls.Add(this.btnregister);
             this.Controls.Add(this.txtnewmail);
             this.Controls.Add(this.txtnewrepass);

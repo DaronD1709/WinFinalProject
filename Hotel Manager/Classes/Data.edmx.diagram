@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1b55bf8b9d5747cbbd4704f5bf3a4bb0" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelModel.Account_Employee" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Account_Manager" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Checkin_out" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Customer" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Employee" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.HistoryRoomcheck" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.InventoryHistory" Width="1.5" PointX="3" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Item" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Manager" Width="1.5" PointX="3.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Payroll" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Penalty" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.PenaltyBoard" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Receipt" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.ReportIncome" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.ReportInventory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Room" Width="1.5" PointX="0.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Salary" Width="1.5" PointX="9" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.SalaryBoard" Width="1.5" PointX="6.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Shift" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Smart_Calendar" Width="1.5" PointX="9" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="HotelModel.FK__Account_E__ID_Em__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Account_M__ID_Ma__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Checkin_o__ID_Ca__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Checkin_o__ID_Em__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__HistoryRo__ID_Cu__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Receipt__ID_Cust__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__HistoryRo__ID_Em__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Payroll__ID_Empl__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Penalty__ID_Empl__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Receipt__ID_Empl__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Salary__ID_Emplo__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Smart_Cal__ID_Em__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__HistoryRo__ID_Ro__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Inventory__ID_It__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Inventory__ID_Ro__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Payroll__ID_Mana__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Penalty__ID_Mana__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Penalty__ID_Cale__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Penalty__ID_Pena__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Receipt__ID_Room__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Salary__ID_Calen__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Salary__ID_Salar__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Smart_Cal__ID_Sh__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

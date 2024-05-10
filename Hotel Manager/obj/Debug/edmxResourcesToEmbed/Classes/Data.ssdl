@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account_Employee">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+    </Key>
+    <Property Name="ID_Employee" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Account_Manager">
+    <Key>
+      <PropertyRef Name="ID_Manager" />
+    </Key>
+    <Property Name="ID_Manager" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Checkin_out">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+      <PropertyRef Name="ID_Calendar" />
+    </Key>
+    <Property Name="ID_Employee" Type="int" Nullable="false" />
+    <Property Name="ID_Calendar" Type="int" Nullable="false" />
+    <Property Name="Timecheckin" Type="datetime" />
+    <Property Name="Timecheckout" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID_Customer" />
+    </Key>
+    <Property Name="ID_Customer" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="Pictures" Type="varbinary(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="DOB" Type="date" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+    </Key>
+    <Property Name="ID_Employee" Type="int" Nullable="false" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Role" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HistoryRoomcheck">
+    <Key>
+      <PropertyRef Name="ID_Customer" />
+      <PropertyRef Name="ID_Room" />
+    </Key>
+    <Property Name="ID_Customer" Type="int" Nullable="false" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="ID_Room" Type="int" Nullable="false" />
+    <Property Name="Timecheckin" Type="datetime" />
+    <Property Name="Timecheckout" Type="datetime" />
+    <Property Name="Timehavetocheckout" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InventoryHistory">
+    <Key>
+      <PropertyRef Name="ID_InventoryHistory" />
+    </Key>
+    <Property Name="ID_InventoryHistory" Type="int" Nullable="false" />
+    <Property Name="ID_Items" Type="int" />
+    <Property Name="Number" Type="int" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ID_Room" Type="int" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ID_Items" />
+    </Key>
+    <Property Name="ID_Items" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="ID_Manager" />
+    </Key>
+    <Property Name="ID_Manager" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Payroll">
+    <Key>
+      <PropertyRef Name="ID_Payroll" />
+    </Key>
+    <Property Name="ID_Payroll" Type="int" Nullable="false" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="ID_Manager" Type="int" />
+    <Property Name="Total_Payment" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Punish" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Penalty">
+    <Key>
+      <PropertyRef Name="ID_Penalty" />
+    </Key>
+    <Property Name="ID_Penalty" Type="int" Nullable="false" />
+    <Property Name="ID_PenaltyBoard" Type="int" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="ID_Manager" Type="int" />
+    <Property Name="ID_Calendar" Type="int" />
+    <Property Name="Day" Type="date" />
+    <Property Name="Shift" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="PenaltyBoard">
+    <Key>
+      <PropertyRef Name="ID_PenaltyBoard" />
+    </Key>
+    <Property Name="ID_PenaltyBoard" Type="int" Nullable="false" />
+    <Property Name="Shift" Type="nvarchar" MaxLength="100" />
+    <Property Name="Day" Type="date" />
+    <Property Name="Role" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Receipt">
+    <Key>
+      <PropertyRef Name="ID_Receipt" />
+    </Key>
+    <Property Name="ID_Receipt" Type="int" Nullable="false" />
+    <Property Name="ID_Customer" Type="int" />
+    <Property Name="Name_Customer" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID_Room" Type="int" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="Timemake" Type="datetime" />
+    <Property Name="Totalpayment" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Dayintotal" Type="date" />
+  </EntityType>
+  <EntityType Name="ReportIncome">
+    <Key>
+      <PropertyRef Name="ID_ReportIncome" />
+    </Key>
+    <Property Name="ID_ReportIncome" Type="int" Nullable="false" />
+    <Property Name="AmountIncome" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AmountOutcome" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="ReportInventory">
+    <Key>
+      <PropertyRef Name="ID_ReportInventory" />
+    </Key>
+    <Property Name="ID_ReportInventory" Type="int" Nullable="false" />
+    <Property Name="Totalpriceatitems" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Totalpricedeliveritems" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Day" Type="date" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID_Room" />
+    </Key>
+    <Property Name="ID_Room" Type="int" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="100" />
+    <Property Name="Numberofbed" Type="int" />
+    <Property Name="Priceperhours" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="ID_Salary" />
+    </Key>
+    <Property Name="ID_Salary" Type="int" Nullable="false" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="ID_SalaryBoard" Type="int" />
+    <Property Name="ID_Calendar" Type="int" />
+    <Property Name="Day" Type="date" />
+    <Property Name="Shift" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="SalaryBoard">
+    <Key>
+      <PropertyRef Name="ID_SalaryBoard" />
+    </Key>
+    <Property Name="ID_SalaryBoard" Type="int" Nullable="false" />
+    <Property Name="Day" Type="date" />
+    <Property Name="Shift" Type="nvarchar" MaxLength="100" />
+    <Property Name="Role" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="ID_Shift" />
+    </Key>
+    <Property Name="ID_Shift" Type="int" Nullable="false" />
+    <Property Name="Timein" Type="time" Precision="7" />
+    <Property Name="Timeout" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="Smart_Calendar">
+    <Key>
+      <PropertyRef Name="ID_Calendar" />
+    </Key>
+    <Property Name="ID_Calendar" Type="int" Nullable="false" />
+    <Property Name="ID_Shift" Type="int" />
+    <Property Name="Timein" Type="time" Precision="7" />
+    <Property Name="Timeout" Type="time" Precision="7" />
+    <Property Name="ID_Employee" Type="int" />
+    <Property Name="Name_Employee" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Account_E__ID_Em__59FA5E80">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Account_Employee" Type="Self.Account_Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Account_Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Account_M__ID_Ma__398D8EEE">
+    <End Role="Manager" Type="Self.Manager" Multiplicity="1" />
+    <End Role="Account_Manager" Type="Self.Account_Manager" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="ID_Manager" />
+      </Principal>
+      <Dependent Role="Account_Manager">
+        <PropertyRef Name="ID_Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Checkin_o__ID_Ca__44FF419A">
+    <End Role="Smart_Calendar" Type="Self.Smart_Calendar" Multiplicity="1" />
+    <End Role="Checkin_out" Type="Self.Checkin_out" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Smart_Calendar">
+        <PropertyRef Name="ID_Calendar" />
+      </Principal>
+      <Dependent Role="Checkin_out">
+        <PropertyRef Name="ID_Calendar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Checkin_o__ID_Em__440B1D61">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Checkin_out" Type="Self.Checkin_out" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Checkin_out">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HistoryRo__ID_Cu__66603565">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="HistoryRoomcheck" Type="Self.HistoryRoomcheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID_Customer" />
+      </Principal>
+      <Dependent Role="HistoryRoomcheck">
+        <PropertyRef Name="ID_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HistoryRo__ID_Em__6754599E">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="HistoryRoomcheck" Type="Self.HistoryRoomcheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="HistoryRoomcheck">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HistoryRo__ID_Ro__68487DD7">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="HistoryRoomcheck" Type="Self.HistoryRoomcheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID_Room" />
+      </Principal>
+      <Dependent Role="HistoryRoomcheck">
+        <PropertyRef Name="ID_Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__ID_It__60A75C0F">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="InventoryHistory" Type="Self.InventoryHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ID_Items" />
+      </Principal>
+      <Dependent Role="InventoryHistory">
+        <PropertyRef Name="ID_Items" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__ID_Ro__619B8048">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="InventoryHistory" Type="Self.InventoryHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID_Room" />
+      </Principal>
+      <Dependent Role="InventoryHistory">
+        <PropertyRef Name="ID_Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payroll__ID_Empl__5629CD9C">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Payroll" Type="Self.Payroll" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Payroll">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payroll__ID_Mana__571DF1D5">
+    <End Role="Manager" Type="Self.Manager" Multiplicity="0..1" />
+    <End Role="Payroll" Type="Self.Payroll" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="ID_Manager" />
+      </Principal>
+      <Dependent Role="Payroll">
+        <PropertyRef Name="ID_Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penalty__ID_Cale__4CA06362">
+    <End Role="Smart_Calendar" Type="Self.Smart_Calendar" Multiplicity="0..1" />
+    <End Role="Penalty" Type="Self.Penalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Smart_Calendar">
+        <PropertyRef Name="ID_Calendar" />
+      </Principal>
+      <Dependent Role="Penalty">
+        <PropertyRef Name="ID_Calendar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penalty__ID_Empl__4AB81AF0">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Penalty" Type="Self.Penalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Penalty">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penalty__ID_Mana__4BAC3F29">
+    <End Role="Manager" Type="Self.Manager" Multiplicity="0..1" />
+    <End Role="Penalty" Type="Self.Penalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="ID_Manager" />
+      </Principal>
+      <Dependent Role="Penalty">
+        <PropertyRef Name="ID_Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penalty__ID_Pena__49C3F6B7">
+    <End Role="PenaltyBoard" Type="Self.PenaltyBoard" Multiplicity="0..1" />
+    <End Role="Penalty" Type="Self.Penalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PenaltyBoard">
+        <PropertyRef Name="ID_PenaltyBoard" />
+      </Principal>
+      <Dependent Role="Penalty">
+        <PropertyRef Name="ID_PenaltyBoard" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Receipt__ID_Cust__6B24EA82">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID_Customer" />
+      </Principal>
+      <Dependent Role="Receipt">
+        <PropertyRef Name="ID_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Receipt__ID_Empl__6C190EBB">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Receipt">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Receipt__ID_Room__6D0D32F4">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID_Room" />
+      </Principal>
+      <Dependent Role="Receipt">
+        <PropertyRef Name="ID_Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary__ID_Calen__534D60F1">
+    <End Role="Smart_Calendar" Type="Self.Smart_Calendar" Multiplicity="0..1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Smart_Calendar">
+        <PropertyRef Name="ID_Calendar" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="ID_Calendar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary__ID_Emplo__5165187F">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary__ID_Salar__52593CB8">
+    <End Role="SalaryBoard" Type="Self.SalaryBoard" Multiplicity="0..1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalaryBoard">
+        <PropertyRef Name="ID_SalaryBoard" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="ID_SalaryBoard" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Smart_Cal__ID_Em__412EB0B6">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Smart_Calendar" Type="Self.Smart_Calendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID_Employee" />
+      </Principal>
+      <Dependent Role="Smart_Calendar">
+        <PropertyRef Name="ID_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Smart_Cal__ID_Sh__403A8C7D">
+    <End Role="Shift" Type="Self.Shift" Multiplicity="0..1" />
+    <End Role="Smart_Calendar" Type="Self.Smart_Calendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shift">
+        <PropertyRef Name="ID_Shift" />
+      </Principal>
+      <Dependent Role="Smart_Calendar">
+        <PropertyRef Name="ID_Shift" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HotelModelStoreContainer">
+    <EntitySet Name="Account_Employee" EntityType="Self.Account_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Account_Manager" EntityType="Self.Account_Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Checkin_out" EntityType="Self.Checkin_out" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryRoomcheck" EntityType="Self.HistoryRoomcheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InventoryHistory" EntityType="Self.InventoryHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manager" EntityType="Self.Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payroll" EntityType="Self.Payroll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Penalty" EntityType="Self.Penalty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PenaltyBoard" EntityType="Self.PenaltyBoard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Receipt" EntityType="Self.Receipt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportIncome" EntityType="Self.ReportIncome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportInventory" EntityType="Self.ReportInventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalaryBoard" EntityType="Self.SalaryBoard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shift" EntityType="Self.Shift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Smart_Calendar" EntityType="Self.Smart_Calendar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Account_E__ID_Em__59FA5E80" Association="Self.FK__Account_E__ID_Em__59FA5E80">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Account_Employee" EntitySet="Account_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Account_M__ID_Ma__398D8EEE" Association="Self.FK__Account_M__ID_Ma__398D8EEE">
+      <End Role="Manager" EntitySet="Manager" />
+      <End Role="Account_Manager" EntitySet="Account_Manager" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Checkin_o__ID_Ca__44FF419A" Association="Self.FK__Checkin_o__ID_Ca__44FF419A">
+      <End Role="Smart_Calendar" EntitySet="Smart_Calendar" />
+      <End Role="Checkin_out" EntitySet="Checkin_out" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Checkin_o__ID_Em__440B1D61" Association="Self.FK__Checkin_o__ID_Em__440B1D61">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Checkin_out" EntitySet="Checkin_out" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HistoryRo__ID_Cu__66603565" Association="Self.FK__HistoryRo__ID_Cu__66603565">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="HistoryRoomcheck" EntitySet="HistoryRoomcheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HistoryRo__ID_Em__6754599E" Association="Self.FK__HistoryRo__ID_Em__6754599E">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="HistoryRoomcheck" EntitySet="HistoryRoomcheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HistoryRo__ID_Ro__68487DD7" Association="Self.FK__HistoryRo__ID_Ro__68487DD7">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="HistoryRoomcheck" EntitySet="HistoryRoomcheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__ID_It__60A75C0F" Association="Self.FK__Inventory__ID_It__60A75C0F">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="InventoryHistory" EntitySet="InventoryHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__ID_Ro__619B8048" Association="Self.FK__Inventory__ID_Ro__619B8048">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="InventoryHistory" EntitySet="InventoryHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payroll__ID_Empl__5629CD9C" Association="Self.FK__Payroll__ID_Empl__5629CD9C">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Payroll" EntitySet="Payroll" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payroll__ID_Mana__571DF1D5" Association="Self.FK__Payroll__ID_Mana__571DF1D5">
+      <End Role="Manager" EntitySet="Manager" />
+      <End Role="Payroll" EntitySet="Payroll" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penalty__ID_Cale__4CA06362" Association="Self.FK__Penalty__ID_Cale__4CA06362">
+      <End Role="Smart_Calendar" EntitySet="Smart_Calendar" />
+      <End Role="Penalty" EntitySet="Penalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penalty__ID_Empl__4AB81AF0" Association="Self.FK__Penalty__ID_Empl__4AB81AF0">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Penalty" EntitySet="Penalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penalty__ID_Mana__4BAC3F29" Association="Self.FK__Penalty__ID_Mana__4BAC3F29">
+      <End Role="Manager" EntitySet="Manager" />
+      <End Role="Penalty" EntitySet="Penalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penalty__ID_Pena__49C3F6B7" Association="Self.FK__Penalty__ID_Pena__49C3F6B7">
+      <End Role="PenaltyBoard" EntitySet="PenaltyBoard" />
+      <End Role="Penalty" EntitySet="Penalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Receipt__ID_Cust__6B24EA82" Association="Self.FK__Receipt__ID_Cust__6B24EA82">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Receipt" EntitySet="Receipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Receipt__ID_Empl__6C190EBB" Association="Self.FK__Receipt__ID_Empl__6C190EBB">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Receipt" EntitySet="Receipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Receipt__ID_Room__6D0D32F4" Association="Self.FK__Receipt__ID_Room__6D0D32F4">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Receipt" EntitySet="Receipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary__ID_Calen__534D60F1" Association="Self.FK__Salary__ID_Calen__534D60F1">
+      <End Role="Smart_Calendar" EntitySet="Smart_Calendar" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary__ID_Emplo__5165187F" Association="Self.FK__Salary__ID_Emplo__5165187F">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary__ID_Salar__52593CB8" Association="Self.FK__Salary__ID_Salar__52593CB8">
+      <End Role="SalaryBoard" EntitySet="SalaryBoard" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Smart_Cal__ID_Em__412EB0B6" Association="Self.FK__Smart_Cal__ID_Em__412EB0B6">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Smart_Calendar" EntitySet="Smart_Calendar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Smart_Cal__ID_Sh__403A8C7D" Association="Self.FK__Smart_Cal__ID_Sh__403A8C7D">
+      <End Role="Shift" EntitySet="Shift" />
+      <End Role="Smart_Calendar" EntitySet="Smart_Calendar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
