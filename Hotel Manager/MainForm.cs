@@ -1,4 +1,5 @@
-﻿using Hotel_Manager.Manager;
+﻿using Hotel_Manager.Employee;
+using Hotel_Manager.Manager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace Hotel_Manager
 {
     public partial class MainForm : Form
     {
+        private bool isCollapsed;
+        private Form currentChildForm;
         public MainForm()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace Hotel_Manager
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new EmployeeForm());
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -46,6 +49,52 @@ namespace Hotel_Manager
             InfoAccount infoAccount = new InfoAccount();
             infoAccount.Show();
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                panel5.Height += 10; 
+                if(panel5.Size == panel5.MaximumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panel5.Height -= 10;
+                if (panel5.Size == panel5.MinimumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
+
+        private void btnreport_Click(object sender, EventArgs e)
+        {
+            timer1.Start(); 
+        }
+
+        //Second Form
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel4.Controls.Add(childForm);
+            panel4.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }
