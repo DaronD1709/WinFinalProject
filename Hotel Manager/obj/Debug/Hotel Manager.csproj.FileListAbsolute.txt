@@ -68,3 +68,4 @@ D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\System.Va
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Manager.InfoAccount.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Employee.EmployeeForm.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Customer.InfoCustomer.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Manager.Account.resources

@@ -31,5 +31,15 @@ namespace Hotel_Manager.Manager
         {
             this.Close();
         }
+
+        private void PictureBoxUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

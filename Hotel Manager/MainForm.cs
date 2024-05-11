@@ -16,6 +16,7 @@ namespace Hotel_Manager
     public partial class MainForm : Form
     {
         private bool isCollapsed;
+        private bool ismenu;
         private Form currentChildForm;
         public MainForm()
         {
@@ -46,8 +47,7 @@ namespace Hotel_Manager
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
            
-            InfoAccount infoAccount = new InfoAccount();
-            infoAccount.Show();
+            
 
         }
 
@@ -95,6 +95,55 @@ namespace Hotel_Manager
             panel4.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                panel1.Width += 15;
+                if (panel1.Size == panel1.MaximumSize)
+                {
+                    timer2.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panel1.Width -= 15;
+                if (panel1.Size == panel1.MinimumSize)
+                {
+                    timer2.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void iconButton1_Click_2(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void btnaccount_Click(object sender, EventArgs e)
+        {
+            InfoAccount infoAccount = new InfoAccount();
+            infoAccount.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        { 
+            Account account = new Account();    
+            account.Show(); 
         }
     }
 }
