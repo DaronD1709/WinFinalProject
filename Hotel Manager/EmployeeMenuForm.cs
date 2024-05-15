@@ -16,6 +16,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel_Manager.Schedule;
 
 namespace Hotel_Manager
 {
@@ -125,7 +126,8 @@ namespace Hotel_Manager
 
         private void btnSalary_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SalaryForm());
+            OpenChildForm(new SalaryEmployee());
+
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -137,6 +139,11 @@ namespace Hotel_Manager
         {
             InfoAccount infoAccount = new InfoAccount();
             infoAccount.Show();
+        }
+
+        private void buttonschedual_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ScheduleTable());
         }
     }
 }

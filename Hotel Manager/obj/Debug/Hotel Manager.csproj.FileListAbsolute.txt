@@ -81,4 +81,9 @@ D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Man
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Customer.UpdateCustomer.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.AdminMenu.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.AddItems.resources
-D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.UpdateItems.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Schedule.ScheduleTable.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Salary.PenaltyForm.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Salary.PunishForm.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.LaborMenu.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.TakeItems.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Salary.SalaryEmployee.resources

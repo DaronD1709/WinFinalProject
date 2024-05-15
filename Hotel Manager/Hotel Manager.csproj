@@ -280,11 +280,17 @@
     <Compile Include="Inventory\AddItems.Designer.cs">
       <DependentUpon>AddItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\UpdateItems.cs">
+    <Compile Include="Inventory\TakeItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\UpdateItems.Designer.cs">
-      <DependentUpon>UpdateItems.cs</DependentUpon>
+    <Compile Include="Inventory\TakeItems.Designer.cs">
+      <DependentUpon>TakeItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaborMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaborMenu.Designer.cs">
+      <DependentUpon>LaborMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -330,11 +336,35 @@
     <Compile Include="Room\CreateRoom.Designer.cs">
       <DependentUpon>CreateRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Salary\PenaltyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\PenaltyForm.Designer.cs">
+      <DependentUpon>PenaltyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\PunishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\PunishForm.Designer.cs">
+      <DependentUpon>PunishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\SalaryEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\SalaryEmployee.Designer.cs">
+      <DependentUpon>SalaryEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Salary\SalaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Salary\SalaryForm.Designer.cs">
       <DependentUpon>SalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ScheduleTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule\ScheduleTable.Designer.cs">
+      <DependentUpon>ScheduleTable.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
@@ -378,8 +408,11 @@
     <EmbeddedResource Include="Inventory\AddItems.resx">
       <DependentUpon>AddItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\UpdateItems.resx">
-      <DependentUpon>UpdateItems.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory\TakeItems.resx">
+      <DependentUpon>TakeItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaborMenu.resx">
+      <DependentUpon>LaborMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -412,8 +445,20 @@
     <EmbeddedResource Include="Room\CreateRoom.resx">
       <DependentUpon>CreateRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Salary\PenaltyForm.resx">
+      <DependentUpon>PenaltyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\PunishForm.resx">
+      <DependentUpon>PunishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\SalaryEmployee.resx">
+      <DependentUpon>SalaryEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Salary\SalaryForm.resx">
       <DependentUpon>SalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ScheduleTable.resx">
+      <DependentUpon>ScheduleTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="algorithms\set_cover.proto" />
     <None Include="bop\bop_parameters.proto" />
@@ -481,7 +526,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Report\" />
-    <Folder Include="Schedule\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

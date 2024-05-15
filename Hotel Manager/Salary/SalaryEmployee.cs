@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Manager.Room
+namespace Hotel_Manager.Salary
 {
-    public partial class BookRooms : Form
+    public partial class SalaryEmployee : Form
     {
-        public BookRooms()
+        public SalaryEmployee()
         {
             InitializeComponent();
-        }
-
-        private void BookRooms_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

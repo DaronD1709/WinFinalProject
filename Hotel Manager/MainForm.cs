@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel_Manager.Schedule;
 
 namespace Hotel_Manager
 {
@@ -172,6 +173,46 @@ namespace Hotel_Manager
         private void btnrevenue_Click(object sender, EventArgs e)
         {
             OpenChildForm(new RevenueForm());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonschedual_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ScheduleTable());
         }
     }
 }

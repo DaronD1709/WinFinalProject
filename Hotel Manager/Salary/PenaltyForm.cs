@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace Hotel_Manager.Salary
 {
-    public partial class SalaryForm : Form
+    public partial class PenaltyForm : Form
     {
-        public SalaryForm()
+        public PenaltyForm()
         {
             InitializeComponent();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            PenaltyForm penaltyForm = new PenaltyForm();
-            penaltyForm.ShowDialog();   
+            PunishForm punishForm = new PunishForm();
+            punishForm.ShowDialog();
         }
     }
 }

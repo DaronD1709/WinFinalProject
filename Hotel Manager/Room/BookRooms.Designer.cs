@@ -45,6 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btncheckout = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGVEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.DGVEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.DGVEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVEmployee.Location = new System.Drawing.Point(82, 313);
+            this.DGVEmployee.Location = new System.Drawing.Point(82, 316);
             this.DGVEmployee.Name = "DGVEmployee";
             this.DGVEmployee.RowHeadersWidth = 51;
             this.DGVEmployee.RowTemplate.Height = 24;
@@ -78,7 +79,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(644, 641);
+            this.button1.Location = new System.Drawing.Point(644, 644);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(471, 47);
             this.button1.TabIndex = 57;
@@ -195,7 +196,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(644, 313);
+            this.dataGridView1.Location = new System.Drawing.Point(644, 316);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -209,7 +210,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(82, 641);
+            this.button2.Location = new System.Drawing.Point(82, 644);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(471, 47);
             this.button2.TabIndex = 71;
@@ -236,12 +237,32 @@
             this.iconButton1.Text = "Book Room";
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // btncheckout
+            // 
+            this.btncheckout.BackColor = System.Drawing.Color.Salmon;
+            this.btncheckout.FlatAppearance.BorderSize = 0;
+            this.btncheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncheckout.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncheckout.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btncheckout.IconColor = System.Drawing.Color.Black;
+            this.btncheckout.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btncheckout.IconSize = 35;
+            this.btncheckout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncheckout.Location = new System.Drawing.Point(539, 48);
+            this.btncheckout.Name = "btncheckout";
+            this.btncheckout.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.btncheckout.Size = new System.Drawing.Size(249, 46);
+            this.btncheckout.TabIndex = 73;
+            this.btncheckout.Text = "Check Out";
+            this.btncheckout.UseVisualStyleBackColor = false;
+            // 
             // BookRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(1168, 710);
+            this.ClientSize = new System.Drawing.Size(1168, 738);
+            this.Controls.Add(this.btncheckout);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -261,6 +282,7 @@
             this.Controls.Add(this.label4);
             this.Name = "BookRooms";
             this.Text = "BookRooms";
+            this.Load += new System.EventHandler(this.BookRooms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -287,5 +309,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btncheckout;
     }
 }

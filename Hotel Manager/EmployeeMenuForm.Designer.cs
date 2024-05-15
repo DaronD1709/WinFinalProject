@@ -209,6 +209,7 @@
             this.buttonschedual.TabIndex = 4;
             this.buttonschedual.Text = "Schedule";
             this.buttonschedual.UseVisualStyleBackColor = false;
+            this.buttonschedual.Click += new System.EventHandler(this.buttonschedual_Click);
             // 
             // btncustomer
             // 

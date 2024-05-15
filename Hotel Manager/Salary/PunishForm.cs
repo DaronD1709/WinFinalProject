@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Manager.Inventory
+namespace Hotel_Manager.Salary
 {
-    public partial class UpdateItems : Form
+    public partial class PunishForm : Form
     {
-        public UpdateItems()
+        public PunishForm()
         {
             InitializeComponent();
         }

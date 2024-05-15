@@ -30,9 +30,9 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btndelete = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btndelete = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,25 +57,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(1003, 442);
             this.dataGridView1.TabIndex = 54;
             // 
-            // btndelete
+            // textBox1
             // 
-            this.btndelete.BackColor = System.Drawing.Color.Red;
-            this.btndelete.FlatAppearance.BorderSize = 0;
-            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndelete.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btndelete.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btndelete.IconColor = System.Drawing.Color.Black;
-            this.btndelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btndelete.IconSize = 35;
-            this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndelete.Location = new System.Drawing.Point(475, 658);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.btndelete.Size = new System.Drawing.Size(202, 54);
-            this.btndelete.TabIndex = 55;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = false;
+            this.textBox1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(308, 114);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(439, 43);
+            this.textBox1.TabIndex = 56;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // iconButton1
             // 
@@ -98,15 +88,25 @@
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // textBox1
+            // btndelete
             // 
-            this.textBox1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(308, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(439, 43);
-            this.textBox1.TabIndex = 56;
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.btndelete.BackColor = System.Drawing.Color.Red;
+            this.btndelete.FlatAppearance.BorderSize = 0;
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndelete.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btndelete.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btndelete.IconColor = System.Drawing.Color.Black;
+            this.btndelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btndelete.IconSize = 35;
+            this.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndelete.Location = new System.Drawing.Point(475, 658);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.btndelete.Size = new System.Drawing.Size(202, 54);
+            this.btndelete.TabIndex = 55;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
             // 
             // AddInventory
             // 
