@@ -19,7 +19,8 @@ namespace Hotel_Manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtusername.Text = "User Name";
+            txtpassword.Text = "Password";
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -50,8 +51,7 @@ namespace Hotel_Manager
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            New_Users form_NewUser = new New_Users();
-            form_NewUser.Show(this);
+           
         }
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
@@ -60,6 +60,52 @@ namespace Hotel_Manager
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusername_Enter(object sender, EventArgs e)
+        {
+            if ( txtusername.Text == "User Name")
+            {
+                txtusername.Text = "";
+                txtusername.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtusername_Leave(object sender, EventArgs e)
+        {
+            if (txtusername.Text == "")
+            {
+                txtusername.Text = "User Name";
+                txtusername.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtpassword_Enter(object sender, EventArgs e)
+        {
+            if (txtpassword.Text == "Password")
+            {
+                txtpassword.Text = "";
+                txtpassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtpassword_Leave(object sender, EventArgs e)
+        {
+            if (txtpassword.Text == "")
+            {
+                txtpassword.Text = "Password";
+                txtpassword.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void btnlogin_Click(object sender, EventArgs e)
         {
 
         }

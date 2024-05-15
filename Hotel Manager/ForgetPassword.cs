@@ -28,17 +28,7 @@ namespace Hotel_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string textMail = txtmail.Text;
-            if (checkEmail(textMail))
-            {
-                New_Users form = new New_Users();
-                codeOtp1 = GenarateOTP();
-                form.SendOtpEmail(textMail, codeOtp1);
-            }
-            else
-            {
-                MessageBox.Show("Email chưa được đăng kí!", "OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
 

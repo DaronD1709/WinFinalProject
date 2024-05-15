@@ -1,5 +1,10 @@
 ﻿using Hotel_Manager.Employee;
 using Hotel_Manager.Manager;
+using Hotel_Manager.Room;
+using Hotel_Manager.Revenue;
+using Hotel_Manager.Inventory;
+using Hotel_Manager.Customer;
+using Hotel_Manager.Salary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,8 +136,6 @@ namespace Hotel_Manager
 
         private void btnaccount_Click(object sender, EventArgs e)
         {
-            InfoAccount infoAccount = new InfoAccount();
-            infoAccount.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -141,9 +144,34 @@ namespace Hotel_Manager
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        { 
-            Account account = new Account();    
-            account.Show(); 
+        {
+            InfoAccount infoAccount = new InfoAccount();
+            infoAccount.Show();
+        }
+
+        private void btnroom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CreateRoom());
+        }
+
+        private void buttoninventory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddInventory());
+        }
+
+        private void btnSalary_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SalaryForm());
+        }
+
+        private void btncustomer_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new InfoCustomer());
+        }
+
+        private void btnrevenue_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new RevenueForm());
         }
     }
 }

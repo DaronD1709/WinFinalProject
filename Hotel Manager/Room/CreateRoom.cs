@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Manager.Manager
+namespace Hotel_Manager.Room
 {
-    public partial class Account : Form
+    public partial class CreateRoom : Form
     {
-        public Account()
+        public CreateRoom()
         {
             InitializeComponent();
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            this.dateTimePicker1.Enabled = false;
         }
     }
 }

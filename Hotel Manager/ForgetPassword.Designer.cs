@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Agency FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(337, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 53);
+            this.label1.Size = new System.Drawing.Size(272, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Forget Password";
             // 
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(924, 495);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnsendcode);

@@ -16,5 +16,15 @@ namespace Hotel_Manager.Customer
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                PictureBoxUser.Image = Image.FromFile(opf.FileName);
+            }
+        }
     }
 }

@@ -41,5 +41,10 @@ namespace Hotel_Manager.Manager
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,7 +39,7 @@
             this.label1.Font = new System.Drawing.Font("Agency FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(260, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 53);
+            this.label1.Size = new System.Drawing.Size(282, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Confirm Code OTP";
             // 
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.btnOTP);
             this.Controls.Add(this.txtOTP);
