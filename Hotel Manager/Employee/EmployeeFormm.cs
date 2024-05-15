@@ -8,52 +8,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Manager.Customer
+namespace Hotel_Manager.Employee
 {
-    public partial class InfoCustomer : Form
+    public partial class EmployeeForm : Form
     {
-        public InfoCustomer()
+        public EmployeeForm()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "Search by code, employee name";
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Search by ID, Customer name")
+            if (textBox1.Text == "Search by code, employee name")
             {
                 textBox1.Text = "";
                 textBox1.ForeColor = Color.Black;
             }
         }
 
-        private void InfoCustomer_Load(object sender, EventArgs e)
-        {
-            textBox1.Text = "Search by ID, Customer name";
-        }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Search by ID, Customer name";
+                textBox1.Text = "Search by code, employee name";
                 textBox1.ForeColor = Color.LightGray;
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void DGVEmployee_DoubleClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.ShowDialog();
+            UpdateEmployee updateEmployee = new UpdateEmployee();
         }
     }
 }

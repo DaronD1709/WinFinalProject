@@ -65,7 +65,6 @@ D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\System.Te
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\bin\Debug\System.ValueTuple.xml
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Manager.InfoAccount.resources
-D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Employee.EmployeeForm.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Customer.InfoCustomer.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.AddInventory.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Room.CreateRoom.resources
@@ -76,3 +75,10 @@ D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Man
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Room.BookRooms.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Employee.AddEmployee.resources
 D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Employee.UpdateEmployee.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Employee.EmployeeForm.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Customer.AddCustomer.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Room.AddRoom.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Customer.UpdateCustomer.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.AdminMenu.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.AddItems.resources
+D:\Final Project\Hotel Manager\WinFinalProject\Hotel Manager\obj\Debug\Hotel_Manager.Inventory.UpdateItems.resources

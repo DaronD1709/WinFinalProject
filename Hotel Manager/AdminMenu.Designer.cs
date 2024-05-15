@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Manager
 {
-    partial class MainForm
+    partial class AdminMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btnlogout = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,34 +49,52 @@
             this.buttoninventory = new FontAwesome.Sharp.IconButton();
             this.buttonschedual = new FontAwesome.Sharp.IconButton();
             this.btncustomer = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // timer2
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnlogout);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.linkLabel3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.btnemployee);
-            this.panel1.Controls.Add(this.btnroom);
-            this.panel1.Controls.Add(this.buttoninventory);
-            this.panel1.Controls.Add(this.buttonschedual);
-            this.panel1.Controls.Add(this.btncustomer);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(276, 689);
-            this.panel1.MinimumSize = new System.Drawing.Size(125, 689);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(125, 689);
-            this.panel1.TabIndex = 0;
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(125, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1346, 885);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1346, 885);
+            this.panel4.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(175, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 28);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "User";
             // 
             // linkLabel3
             // 
@@ -101,58 +119,43 @@
             this.label4.Size = new System.Drawing.Size(87, 28);
             this.label4.TabIndex = 14;
             this.label4.Text = "Welcome ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label2
+            // panel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(175, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 28);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "User";
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Controls.Add(this.iconButton2);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.btnlogout);
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.linkLabel3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnemployee);
+            this.panel1.Controls.Add(this.btnroom);
+            this.panel1.Controls.Add(this.buttoninventory);
+            this.panel1.Controls.Add(this.buttonschedual);
+            this.panel1.Controls.Add(this.btncustomer);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(272, 885);
+            this.panel1.MinimumSize = new System.Drawing.Size(125, 885);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 885);
+            this.panel1.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnrevenue);
             this.panel5.Controls.Add(this.btnreport);
             this.panel5.Controls.Add(this.btnSalary);
-            this.panel5.Location = new System.Drawing.Point(0, 499);
+            this.panel5.Location = new System.Drawing.Point(-3, 614);
             this.panel5.MaximumSize = new System.Drawing.Size(279, 175);
             this.panel5.MinimumSize = new System.Drawing.Size(279, 52);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(279, 52);
             this.panel5.TabIndex = 7;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(125, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1346, 745);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1346, 745);
-            this.panel4.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // btnlogout
             // 
@@ -165,10 +168,10 @@
             this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnlogout.IconSize = 35;
             this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Location = new System.Drawing.Point(2, 113);
+            this.btnlogout.Location = new System.Drawing.Point(0, 111);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.btnlogout.Size = new System.Drawing.Size(279, 54);
+            this.btnlogout.Size = new System.Drawing.Size(266, 54);
             this.btnlogout.TabIndex = 20;
             this.btnlogout.Text = "Log Out";
             this.btnlogout.UseVisualStyleBackColor = false;
@@ -185,14 +188,14 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 164);
+            this.iconButton1.Location = new System.Drawing.Point(0, 167);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(279, 54);
+            this.iconButton1.Size = new System.Drawing.Size(246, 54);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Menu";
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_2);
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // pictureBox1
             // 
@@ -203,7 +206,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnrevenue
             // 
@@ -276,14 +278,14 @@
             this.btnemployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnemployee.IconSize = 35;
             this.btnemployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnemployee.Location = new System.Drawing.Point(0, 220);
+            this.btnemployee.Location = new System.Drawing.Point(0, 223);
             this.btnemployee.Name = "btnemployee";
             this.btnemployee.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.btnemployee.Size = new System.Drawing.Size(279, 54);
+            this.btnemployee.Size = new System.Drawing.Size(272, 54);
             this.btnemployee.TabIndex = 0;
             this.btnemployee.Text = "Employee";
             this.btnemployee.UseVisualStyleBackColor = false;
-            this.btnemployee.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnemployee.Click += new System.EventHandler(this.btnemployee_Click);
             // 
             // btnroom
             // 
@@ -296,12 +298,12 @@
             this.btnroom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnroom.IconSize = 35;
             this.btnroom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnroom.Location = new System.Drawing.Point(0, 332);
+            this.btnroom.Location = new System.Drawing.Point(0, 335);
             this.btnroom.Name = "btnroom";
             this.btnroom.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.btnroom.Size = new System.Drawing.Size(279, 54);
+            this.btnroom.Size = new System.Drawing.Size(286, 54);
             this.btnroom.TabIndex = 2;
-            this.btnroom.Text = "Room";
+            this.btnroom.Text = " Create Room";
             this.btnroom.UseVisualStyleBackColor = false;
             this.btnroom.Click += new System.EventHandler(this.btnroom_Click);
             // 
@@ -316,7 +318,7 @@
             this.buttoninventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttoninventory.IconSize = 35;
             this.buttoninventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttoninventory.Location = new System.Drawing.Point(0, 388);
+            this.buttoninventory.Location = new System.Drawing.Point(-4, 447);
             this.buttoninventory.Name = "buttoninventory";
             this.buttoninventory.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
             this.buttoninventory.Size = new System.Drawing.Size(280, 54);
@@ -336,7 +338,7 @@
             this.buttonschedual.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonschedual.IconSize = 35;
             this.buttonschedual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonschedual.Location = new System.Drawing.Point(0, 444);
+            this.buttonschedual.Location = new System.Drawing.Point(-4, 503);
             this.buttonschedual.Name = "buttonschedual";
             this.buttonschedual.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
             this.buttonschedual.Size = new System.Drawing.Size(279, 54);
@@ -355,29 +357,70 @@
             this.btncustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btncustomer.IconSize = 35;
             this.btncustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncustomer.Location = new System.Drawing.Point(0, 276);
+            this.btncustomer.Location = new System.Drawing.Point(0, 279);
             this.btncustomer.Name = "btncustomer";
             this.btncustomer.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
-            this.btncustomer.Size = new System.Drawing.Size(279, 54);
+            this.btncustomer.Size = new System.Drawing.Size(272, 54);
             this.btncustomer.TabIndex = 1;
             this.btncustomer.Text = "Customer";
             this.btncustomer.UseVisualStyleBackColor = false;
             this.btncustomer.Click += new System.EventHandler(this.btncustomer_Click);
             // 
-            // MainForm
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.White;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconButton2.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(-6, 559);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(283, 54);
+            this.iconButton2.TabIndex = 19;
+            this.iconButton2.Text = "In/Out";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.White;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(0, 391);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(286, 54);
+            this.iconButton3.TabIndex = 21;
+            this.iconButton3.Text = "Book Room";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1471, 745);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1471, 885);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Name = "AdminMenu";
+            this.Text = "AdminMenu";
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -385,25 +428,27 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton buttonschedual;
-        private FontAwesome.Sharp.IconButton buttoninventory;
-        private FontAwesome.Sharp.IconButton btnroom;
-        private FontAwesome.Sharp.IconButton btncustomer;
-        private FontAwesome.Sharp.IconButton btnemployee;
-        private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton btnreport;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnrevenue;
-        private FontAwesome.Sharp.IconButton btnSalary;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconButton btnemployee;
+        private FontAwesome.Sharp.IconButton btnroom;
+        private FontAwesome.Sharp.IconButton buttoninventory;
+        private FontAwesome.Sharp.IconButton buttonschedual;
+        private FontAwesome.Sharp.IconButton btncustomer;
+        private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnrevenue;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnreport;
+        private FontAwesome.Sharp.IconButton btnSalary;
         private FontAwesome.Sharp.IconButton btnlogout;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

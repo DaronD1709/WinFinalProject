@@ -25,7 +25,7 @@ namespace Hotel_Manager
           
             
             
-                Application.Run(new MainForm());
+                Application.Run(new AdminMenu());
     
 
 

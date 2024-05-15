@@ -43,10 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureboxemployee = new FontAwesome.Sharp.IconPictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -210,16 +210,6 @@
             this.panel1.Size = new System.Drawing.Size(935, 434);
             this.panel1.TabIndex = 35;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 36);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Employee Information";
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -261,6 +251,16 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "Gender:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 36);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Employee Information";
+            // 
             // pictureboxemployee
             // 
             this.pictureboxemployee.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -268,10 +268,11 @@
             this.pictureboxemployee.IconChar = FontAwesome.Sharp.IconChar.Camera;
             this.pictureboxemployee.IconColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureboxemployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pictureboxemployee.IconSize = 225;
+            this.pictureboxemployee.IconSize = 201;
             this.pictureboxemployee.Location = new System.Drawing.Point(36, 55);
             this.pictureboxemployee.Name = "pictureboxemployee";
             this.pictureboxemployee.Size = new System.Drawing.Size(222, 201);
+            this.pictureboxemployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureboxemployee.TabIndex = 36;
             this.pictureboxemployee.TabStop = false;
             // 

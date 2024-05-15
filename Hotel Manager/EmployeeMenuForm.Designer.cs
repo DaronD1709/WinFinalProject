@@ -45,6 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnlogout = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +60,7 @@
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
             this.iconButton1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Hamburger;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.List;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
@@ -113,7 +114,7 @@
             this.panel5.Controls.Add(this.btnreport);
             this.panel5.Controls.Add(this.btnSalary);
             this.panel5.Location = new System.Drawing.Point(0, 446);
-            this.panel5.MaximumSize = new System.Drawing.Size(279, 175);
+            this.panel5.MaximumSize = new System.Drawing.Size(279, 112);
             this.panel5.MinimumSize = new System.Drawing.Size(279, 52);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(279, 52);
@@ -260,6 +261,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnlogout);
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -277,6 +279,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 689);
             this.panel1.TabIndex = 2;
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.White;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.btnlogout.IconColor = System.Drawing.Color.Black;
+            this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlogout.IconSize = 35;
+            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.Location = new System.Drawing.Point(-1, 560);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.btnlogout.Size = new System.Drawing.Size(279, 54);
+            this.btnlogout.TabIndex = 19;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -338,5 +359,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnlogout;
     }
 }
